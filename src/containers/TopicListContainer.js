@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
 import TopicList from '../components/TopicList';
 
 const mapStateToProps = state => ({
@@ -7,4 +8,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
+  { onPageChange: push },
 )(TopicList);
