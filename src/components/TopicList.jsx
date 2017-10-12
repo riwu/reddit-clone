@@ -1,12 +1,13 @@
 import React from 'react';
-import Topic from './Topic';
+import Topic from '../containers/TopicContainer';
 
 const TopicList = ({ topics }) => (
   <div>
-    {topics.map(topic => (
+    {Object.entries(topics).map(([topicId, topic]) => (
       <Topic
-        key={topic.id}
-        title={topic.title}
+        key={topicId}
+        topicId={topicId}
+        topic={topic}
       />
     ))}
   </div>

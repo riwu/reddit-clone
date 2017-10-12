@@ -9,3 +9,13 @@ export const createNewTopic = title => ({
   type: types.CREATE_NEW_TOPIC,
   title,
 });
+
+export const upvoteTopic = topicId => ({
+  type: types.UPVOTE_TOPIC,
+  topicId,
+});
+
+export const downvoteTopic = topicId => ({
+  type: types.DOWNVOTE_TOPIC,
+  topicId,
+});
