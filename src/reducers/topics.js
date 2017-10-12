@@ -5,7 +5,10 @@ const topics = (state = [], action) => {
     case CREATE_NEW_TOPIC:
       return [
         ...state,
-        action.title,
+        {
+          title: action.title,
+          id: state.count,
+        },
       ];
     default:
       return state;
