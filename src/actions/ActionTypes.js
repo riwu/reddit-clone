@@ -1,0 +1,2 @@
+export const SET_NEW_TOPIC_TITLE = 'SET_NEW_TOPIC_TITLE';
+export const CREATE_NEW_TOPIC = 'CREATE_NEW_TOPIC';

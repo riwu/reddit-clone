@@ -13,9 +13,11 @@
       "es6": true,
       "browser": true
   },
+  "parser": "babel-eslint",
   "rules": {
     "strict": 0,
     "react/prop-types": 0,
-    "no-console": 0
+    "no-console": 0,
+    "import/no-named-as-default": 0
   }
 }
