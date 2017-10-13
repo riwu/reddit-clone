@@ -7,7 +7,7 @@ const POST_PER_PAGE = 3;
 const TopicList = ({ topics, onPageChange, match }) => {
   const topicsArr = Object.entries(topics);
   const pageCount = Math.ceil(topicsArr.length / POST_PER_PAGE);
-  const pageNum = Number(match.params.pageNum);
+  const pageNum = Number(match.params.pageNum) || 1;
   const startPost = (pageNum - 1) * POST_PER_PAGE;
   return (
     <div>
@@ -26,7 +26,7 @@ const TopicList = ({ topics, onPageChange, match }) => {
         <Pagination
           onPageChange={({ selected }) => onPageChange(`/${selected + 1}`)}
           pageCount={pageCount}
-          initialPage={pageNum}
+          initialPage={pageNum - 1}
           pageRangeDisplayed={5}
           marginPagesDisplayed={1}
           breakLabel={<a href="">...</a>}
@@ -36,7 +36,6 @@ const TopicList = ({ topics, onPageChange, match }) => {
           activeClassName={'active'}
         />
       }
-
     </div>
   );
 };

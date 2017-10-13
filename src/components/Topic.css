@@ -1,0 +1,31 @@
+.Topic {
+  border-bottom: 1px solid lightgrey;
+  margin: 5px;
+  padding: 15px;
+}
+
+.Topic .buttons {
+  margin-right: 10px;
+}
+
+.Topic .voteButton {
+  margin: 3px;
+}
+
+.Topic .glyph {
+  margin-right: 5px;
+}
+
+.Topic .title {
+  font-weight: bold;
+  font-size: 1.3em;
+  word-wrap: break-word;
+}
+
+.Topic .upvoteCount {
+  color: green;
+}
+
+.Topic .downvoteCount {
+  color: red;
+}
