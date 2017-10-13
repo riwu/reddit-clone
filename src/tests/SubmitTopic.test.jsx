@@ -11,11 +11,15 @@ test('SubmitTopicContainer', () => {
     </Provider>
   ));
   dom.find('input').simulate('change', { target: { value: 'new 123' } });
-  expect(dom.find('FormControl').props().value).toEqual('new 123');
+  expect(dom.find('input').props().value).toEqual('new 123');
+
   dom.find('button').simulate('click');
-  expect(store.getState().topics).toEqual({ 0: {
+  const state = store.getState();
+  expect(dom.find('input').props().value).toEqual('');
+  expect(state.topics).toEqual({ 0: {
     title: 'new 123',
     downvoteCount: 0,
     upvoteCount: 0,
   } });
+  expect(state.newTopic).toEqual('');
 });

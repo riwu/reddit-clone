@@ -12,7 +12,15 @@ const SubmitTopic = ({ newTopicTitle, setNewTopicTitle, createNewTopic }) => (
       placeholder="Create a new topic"
       onChange={e => setNewTopicTitle(e.target.value)}
     />
-    <Button bsStyle="primary" onClick={() => createNewTopic(newTopicTitle)}>Submit</Button>
+    <Button
+      bsStyle="primary"
+      onClick={() => {
+        setNewTopicTitle('');
+        createNewTopic(newTopicTitle);
+      }}
+    >
+      Submit
+    </Button>
   </div>
 );
 
