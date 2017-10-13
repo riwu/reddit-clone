@@ -36,4 +36,6 @@ test('Topic', () => {
   dom.find('button').last().simulate('click');
   expect(store.getState().topics['0'].downvoteCount).toEqual(2);
   expect(store.getState().topics['0'].upvoteCount).toEqual(2);
+
+  dom.unmount();
 });

@@ -22,4 +22,6 @@ test('SubmitTopicContainer', () => {
     upvoteCount: 0,
   } });
   expect(state.newTopic).toEqual('');
+
+  dom.unmount();
 });
