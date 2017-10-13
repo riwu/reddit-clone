@@ -57,10 +57,14 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
     "eslint": "^4.8.0",
-    "eslint-config-airbnb": "^15.0.1"
+    "eslint-config-airbnb": "^15.0.1",
+    "react-test-renderer": "^16.0.0"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/tests/setup-test.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
