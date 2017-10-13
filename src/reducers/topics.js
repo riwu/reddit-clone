@@ -6,7 +6,7 @@ const topics = (state = [], action) => {
       return {
         ...state,
         [Object.keys(state).length]: {
-          title: action.title,
+          title: action.title.trim(),
           upvoteCount: 0,
           downvoteCount: 0,
         },
