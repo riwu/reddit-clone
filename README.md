@@ -1,7 +1,8 @@
 ## About
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-Ejected to allow hot reloading and other custom configurations.
-Everything else was written manually for the purpose of the challenge.
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  
+Ejected to allow hot reloading and other custom configurations.  
+Everything else was written manually for the purpose of the challenge.  
+App is accessible via https://reddit-clone.netlify.com/
 
 ## Commands (self-explanatory)
 - npm install
