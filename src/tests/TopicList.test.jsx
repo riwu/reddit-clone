@@ -19,12 +19,14 @@ test('TopicListContainer', () => {
 
   store.dispatch(createNewTopic('test topic'));
   dom.update();
+  // pagination should be absent when page count is <= 1
   expect(findPagination().exists()).toEqual(false);
 
   expect(dom.find('Topic').length).toEqual(1);
 
   [...Array(30).keys()].forEach(i => store.dispatch(createNewTopic(`test topic ${i}`)));
   dom.update();
+  // topic count should not exceed 20 due to pagination
   expect(dom.find('Topic').length).toEqual(20);
 
   expect(findPagination().prop('pageCount')).toEqual(2);

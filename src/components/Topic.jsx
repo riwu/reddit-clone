@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Glyphicon } from 'react-bootstrap';
 import './Topic.css';
 
+// Presents the topic with the votes and vote buttons
 const Topic = ({ topic, upvote, downvote }) => (
   <div className="Topic">
     <span className="buttons">
