@@ -1,0 +1,7 @@
+.SubmitTopic {
+  display: flex;
+}
+
+.SubmitTopic .input {
+  border-right: none;
+}

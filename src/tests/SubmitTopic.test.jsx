@@ -4,12 +4,18 @@ import { Provider } from 'react-redux';
 import SubmitTopic from '../containers/SubmitTopicContainer';
 import store from '../store';
 
-test('Topic render', () => {
-  const topic = mount((
+test('SubmitTopicContainer', () => {
+  const dom = mount((
     <Provider store={store}>
       <SubmitTopic />
     </Provider>
   ));
-  topic.find('FormControl').simulate('change', { target: { value: 'new 123' } });
-  expect(topic.find('FormControl').props().value).toEqual('new 123');
+  dom.find('input').simulate('change', { target: { value: 'new 123' } });
+  expect(dom.find('FormControl').props().value).toEqual('new 123');
+  dom.find('button').simulate('click');
+  expect(store.getState().topics).toEqual({ 0: {
+    title: 'new 123',
+    downvoteCount: 0,
+    upvoteCount: 0,
+  } });
 });
